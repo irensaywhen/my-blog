@@ -3,7 +3,7 @@ exclude:
   - node_modules
   - gulpfile.js
 
-baseurl: '/'
+baseurl: ''
 
 related_posts_amount: 4
 

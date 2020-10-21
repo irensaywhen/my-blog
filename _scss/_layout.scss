@@ -4,6 +4,22 @@ body {
   }
 }
 
+main {
+  padding-top: $header-height !important;
+
+  @include screen-md {
+    padding-top: $header-md-height !important;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+  background: $light;
+  width: 100vw;
+}
+
 .logo-link {
   display: inline-block;
   min-height: $logo-height;

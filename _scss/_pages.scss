@@ -1,6 +1,7 @@
 main {
   padding-top: map-get($spacers, 4);
 
+  /*-- Post page --*/
   .post {
     line-height: 1.7;
     font-size: 1.1rem;
@@ -17,6 +18,81 @@ main {
       display: inline-block;
       max-width: 100%;
       height: auto;
+    }
+  }
+
+  /*-- About page */
+
+  &.about {
+    padding-top: 0 !important;
+    min-height: 120vh;
+    height: 120vh;
+    background: $primary;
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      z-index: 3000;
+      top: 75%;
+      left: 50%;
+      color: $light;
+    }
+
+    .first-section {
+      position: absolute;
+      top: 25%;
+      width: 100%;
+      height: 250px;
+      background: $stripe-linear-gradient-135deg, $stripe-linear-gradient-0deg,
+        $background-gradient;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      .about-item {
+        font-size: calc(2rem + 1vw);
+        $x-offset: 4.5vw;
+        $y-offset: 7%;
+        $x-lg-offset: 12vw;
+        $width: 45%;
+        $height: 40%;
+        $width-sm: 35%;
+        $height-sm: 40%;
+
+        position: absolute;
+        width: $width;
+        height: $height;
+        background: $light;
+
+        &:first-of-type {
+          top: $y-offset;
+          left: $x-offset;
+          box-shadow: $red-right-shadow;
+
+          @include screen-lg {
+            left: $x-lg-offset;
+          }
+        }
+
+        &:last-of-type {
+          bottom: $y-offset;
+          right: $x-offset;
+          box-shadow: $red-left-shadow;
+
+          @include screen-lg {
+            right: $x-lg-offset;
+          }
+        }
+
+        @include screen-sm {
+          width: $width-sm;
+          height: $height-sm;
+        }
+      }
+    }
+
+    .about-me {
+      background: $light;
+      height: 100vh;
     }
   }
 }

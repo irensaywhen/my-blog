@@ -16,8 +16,8 @@ function styles() {
       })
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./assets/css/'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./assets/css/'));
+  //.pipe(reload());
 }
 
 function serve(done) {
