@@ -30,62 +30,85 @@ main {
     background: $primary;
     position: relative;
 
-    .arrow {
-      position: absolute;
-      z-index: 3000;
-      top: 75%;
-      left: 50%;
-      color: $light;
-    }
-
     .first-section {
-      position: absolute;
-      top: 25%;
-      width: 100%;
-      height: 250px;
-      background: $stripe-linear-gradient-135deg, $stripe-linear-gradient-0deg,
-        $background-gradient;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      height: 100vh;
 
-      .about-item {
-        font-size: calc(2rem + 1vw);
-        $x-offset: 4.5vw;
-        $y-offset: 7%;
-        $x-lg-offset: 12vw;
-        $width: 45%;
-        $height: 40%;
-        $width-sm: 35%;
-        $height-sm: 40%;
-
+      .arrow {
         position: absolute;
-        width: $width;
-        height: $height;
-        background: $light;
+        z-index: 3000;
+        top: 95%;
+        left: 50%;
+        color: $light;
 
-        &:first-of-type {
-          top: $y-offset;
-          left: $x-offset;
-          box-shadow: $red-right-shadow;
+        animation-name: arrow;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+      }
 
-          @include screen-lg {
-            left: $x-lg-offset;
+      .first-section-content {
+        position: absolute;
+        perspective: 200px;
+        top: 35%;
+        width: 100%;
+        height: 250px;
+        background: $stripe-linear-gradient-135deg, $stripe-linear-gradient-0deg,
+          $background-gradient;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        .about-item {
+          @include ease-out;
+          font-size: calc(2rem + 1vw);
+          $x-offset: 4.5vw;
+          $y-offset: 7%;
+          $x-lg-offset: 12vw;
+          $width: 45%;
+          $height: 40%;
+          $width-sm: 35%;
+          $height-sm: 40%;
+          cursor: pointer;
+
+          position: absolute;
+          width: $width;
+          height: $height;
+          background: $light;
+
+          &:first-of-type {
+            top: $y-offset;
+            left: $x-offset;
+            box-shadow: $red-right-shadow;
+            transform: rotate3d(1, 2, 3, 5deg);
+
+            @include screen-lg {
+              left: $x-lg-offset;
+            }
+
+            &:hover {
+              box-shadow: $red-right-shadow-lg;
+              transform: rotate3d(1, 2, 3, 2deg);
+            }
           }
-        }
 
-        &:last-of-type {
-          bottom: $y-offset;
-          right: $x-offset;
-          box-shadow: $red-left-shadow;
+          &:last-of-type {
+            bottom: $y-offset;
+            right: $x-offset;
+            box-shadow: $red-left-shadow;
+            transform: rotate3d(-2, 3, 3, -3deg);
 
-          @include screen-lg {
-            right: $x-lg-offset;
+            @include screen-lg {
+              right: $x-lg-offset;
+            }
+
+            &:hover {
+              box-shadow: $red-left-shadow-lg;
+              transform: rotate3d(-2, 3, 3, -4deg);
+            }
           }
-        }
 
-        @include screen-sm {
-          width: $width-sm;
-          height: $height-sm;
+          @include screen-sm {
+            width: $width-sm;
+            height: $height-sm;
+          }
         }
       }
     }
