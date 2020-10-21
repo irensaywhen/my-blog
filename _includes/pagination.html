@@ -1,0 +1,47 @@
+<nav>
+    <ul
+        class="pagination">
+        <!--Previous page-->
+
+        <li
+            class="page-item {% unless paginator.previous_page %} disabled {% endunless %}">
+            <a
+                class="page-link"
+                href={{paginator.previous_page_path | relative_url }}>
+                <span
+                    aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+
+        <!--Trail-->
+
+        {% for trail in paginator.page_trail %}
+            {%- capture trail_path -%}
+                {{ trail.path | relative_url }}
+            {%- endcapture -%}
+            <li
+                class="page-item {% if page.url == trail_path %} active {% endif %}">
+
+                <a
+                    class="page-link"
+                    href="{{ trail_path }}" title="{{trail.title}}">{{ trail.num }}
+                    {% if page.url == trail_path %}
+                        <span
+                            class="sr-only">(current)</span>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+
+        <!--Next page-->
+        <li
+            class="page-item {% unless paginator.next_page %} disabled {% endunless %}">
+            <a
+                class="page-link"
+                href={{paginator.next_page_path | relative_url }}>
+                <span
+                    aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav> 

@@ -1,0 +1,19 @@
+body {
+  &.mobile-menu {
+    overflow-y: hidden;
+  }
+}
+
+.logo-link {
+  display: inline-block;
+  min-height: $logo-height;
+  background: $light;
+
+  .logo {
+    width: $logo-max-width;
+
+    @include screen-md {
+      width: $logo-md-max-width;
+    }
+  }
+}

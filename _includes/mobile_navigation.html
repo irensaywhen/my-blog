@@ -1,0 +1,21 @@
+<nav
+    class="menu text-center d-flex flex-column align-items-center" id="mobile-menu">
+    
+    <!--Sections list-->
+    <ul
+        class="pl-0 list-unstyled sections d-flex align-items-center py-2 pl-2">
+        {%- include sections_items.html -%}
+    </ul>
+
+    <div class="mt-3">
+        <h2 class="py-1 d-inline-block px-2 bg-light">
+            Categories
+        </h2>
+    
+        <!--Categories list-->
+        <ul
+            class="list-unstyled d-flex flex-wrap justify-content-center px-3 py-2 mt-2">
+            {%- include categories_items.html -%}
+        </ul>
+    </div>
+</nav>

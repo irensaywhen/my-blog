@@ -1,0 +1,11 @@
+{%- for category in site.categories -%}
+    {%- capture category_url -%}
+        {{ category | first | slugify |  prepend: site.data.archives.category | relative_url }}
+    {%- endcapture -%}
+    <li
+        class="category">
+        <a
+            href="{{ category_url }}" class="btn btn-small btn-light font-bio-rhyme font-weight-bolder {%- if page.url == category_url -%} active {%- endif -%}">
+            {{ category | first }}</a>
+    </li>
+{%- endfor -%}

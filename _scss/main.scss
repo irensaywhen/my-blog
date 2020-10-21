@@ -1,0 +1,11 @@
+@import 'variables';
+
+// Bootstrap
+@import '../bootstrap/scss/bootstrap';
+
+// Other styles
+@import 'mixins';
+@import 'theme';
+@import 'components';
+@import 'layout';
+@import 'pages';

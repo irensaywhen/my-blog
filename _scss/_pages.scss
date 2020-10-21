@@ -1,0 +1,22 @@
+main {
+  padding-top: map-get($spacers, 4);
+
+  .post {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    max-width: map-get($container-max-widths, md);
+    margin: 0 auto;
+
+    article {
+      p:last-of-type {
+        margin: 0 !important;
+      }
+    }
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

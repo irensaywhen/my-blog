@@ -1,0 +1,15 @@
+{% for item in site.data.navigation %}
+    {%- capture item_relative_url -%}
+        {{item.link | relative_url}}
+    {%- endcapture -%}
+    <li
+        class="category mr-0 mr-md-2">
+        <a
+            href="{{ item_relative_url }}" class="btn btn-light py-1 py-sm-0 py-md-1 w-100 font-bio-rhyme {% if page.url == item_relative_url %} active {% endif %}">
+            {{ item.name }}
+        </a>
+    </li>
+{% endfor %}
+    <li class="h-100">
+        {%- include social_links.html -%}
+    </li>
