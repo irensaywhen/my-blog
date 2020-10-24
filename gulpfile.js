@@ -4,6 +4,30 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
+const child = require('child_process');
+
+function jekyllBuild(done) {
+  return child
+    .spawn('bundle.bat', ['exec', 'jekyll', 'build', '--watch', '--trace'], {
+      stdio: 'inherit',
+    })
+    .on('close', done);
+}
+
+function serve(done) {
+  browserSync.init(
+    {
+      files: ['./_site/**'],
+      server: {
+        baseDir: './_site',
+      },
+      port: 4000,
+    },
+    done
+  );
+
+  gulp.watch('_scss/**/*.scss', styles);
+}
 
 function styles() {
   return gulp
@@ -16,33 +40,7 @@ function styles() {
       })
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./assets/css/'));
-  //.pipe(reload());
+    .pipe(gulp.dest('./assets/css'));
 }
 
-function serve(done) {
-  browserSync.init(
-    {
-      server: {
-        baseDir: './_site',
-      },
-      port: 8000,
-      host: '0.0.0.0',
-    },
-    done
-  );
-}
-
-function reload() {
-  browserSync.reload();
-}
-
-function watch() {
-  gulp.watch('_scss/**/*.scss', styles);
-  gulp.watch('./_site/*.html').on('change', reload);
-  gulp.watch('./_site/**/*.js').on('change', reload);
-  gulp.watch('./_site/**/*.md').on('change', reload);
-  //gulp.watch('./assets/css/**/*.css').on('change', browserSync.stream);
-}
-
-exports.develop = gulp.series(styles, serve, watch);
+exports.develop = gulp.series(styles, serve, jekyllBuild);
