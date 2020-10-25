@@ -1,5 +1,6 @@
 $primary: #2b2b2b;
 $secondary: #ff3530;
+$secondary-dark: #c1272d;
 $light: #f7f7f7;
 $black: #000;
 
@@ -101,3 +102,6 @@ $red-left-shadow: -20px 20px $secondary;
 $red-left-shadow-lg: -30px 30px $secondary;
 
 $background-gradient: linear-gradient($primary, $primary) 0% 0% / 100% 100%;
+
+$my-photo-max-width: 31.25rem;
+$description-max-width: 37.5rem;

@@ -4,7 +4,7 @@ title: "About"
 permalink: "/about"
 ---
 <main
-    class="about">
+    class="about" id="about">
     <section
         class="bg-primary first-section position-relative">
         <section
@@ -31,9 +31,8 @@ permalink: "/about"
         </section>
     </div>
     <section
-        class="about-me d-flex align-items-center">
-        <div
-            class="container">
+        class="about-me d-flex flex-column justify-content-center">
+        
             {% capture small_photo_url %}
                 {{ "/assets/img/my_photo-small.jpg" | relative_url }}
             {% endcapture %}
@@ -49,32 +48,30 @@ permalink: "/about"
                     srcset="{{ small_photo_url }}">
                 <img
                     alt="Author of the blog"
+                    id="my-photo"
                     src="{{ small_photo_url }}">
             </picture>
-            <p
-                class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <p class="mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
             </p>
-        </div>
+        
     </section>
     <section
         class="about-blog">
-        <div
-            class="container">
+        
             <p
-                class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                class="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
             </p>
-        </div>
+        
     </section>
     <section
         class="cite">
-        <div
-            class="container">
+        
             <p
-                class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                class="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
             </p>
-        </div>
+        
     </section>
 </main>

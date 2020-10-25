@@ -113,6 +113,36 @@ main {
 
     .about-me {
       background: $light;
+      height: 150vh;
+      text-align: center;
+
+      // My photo
+      img {
+        transition: all 1s;
+        display: inline-block;
+        width: 90%;
+        max-width: $my-photo-max-width;
+        height: auto;
+        filter: blur(15px);
+
+        @include screen-sm {
+          width: 75%;
+        }
+
+        @include screen-md {
+          width: 50%;
+        }
+      }
+
+      p {
+        width: 90%;
+        max-width: $description-max-width;
+      }
+    }
+
+    .about-blog {
+      position: relative;
+      background: $light;
       height: 100vh;
     }
   }

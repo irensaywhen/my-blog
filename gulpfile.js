@@ -17,7 +17,7 @@ function jekyllBuild(done) {
 function serve(done) {
   browserSync.init(
     {
-      files: ['./_site/**'],
+      files: ['./_site/**', '!./_site/**/*.css'],
       server: {
         baseDir: './_site',
       },
@@ -40,7 +40,8 @@ function styles() {
       })
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./assets/css'));
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(browserSync.stream());
 }
 
 exports.develop = gulp.series(styles, serve, jekyllBuild);
