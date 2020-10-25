@@ -113,7 +113,7 @@ main {
 
     .about-me {
       background: $light;
-      height: 150vh;
+      min-height: 200vh;
       text-align: center;
 
       // My photo
@@ -137,6 +137,13 @@ main {
       p {
         width: 90%;
         max-width: $description-max-width;
+        height: 100vh;
+        font-size: 1.5rem;
+
+        &:first-of-type {
+          font-size: 2rem;
+          font-weight: 500;
+        }
       }
     }
 
