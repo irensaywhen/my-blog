@@ -33,7 +33,7 @@ $section-md-height: $logo-md-height + 0.5rem;
 $categories-height: 2.665rem;
 
 $header-height: $section-height + $categories-height;
-$header-md-height: $section-height + $section-md-height;
+$header-md-height: $section-height + $categories-height;
 
 // screen
 $screen-xs: 320px;

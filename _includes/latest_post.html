@@ -22,11 +22,6 @@
         </h2>
         <!--Post excerpt-->
         {{ latest_post.excerpt }}
-        <!--Read more button-->
-        <a
-            href="{{ latest_post.url | relative_url }}" class="mt-3 border">
-            Read more
-        </a>
         {% assign post = latest_post%}
         {% include post_tags.html %}
     </div>

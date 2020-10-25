@@ -5,10 +5,10 @@ body {
 }
 
 main {
-  padding-top: $header-height !important;
+  padding-top: $header-height + 2.5rem !important;
 
   @include screen-md {
-    padding-top: $header-md-height !important;
+    padding-top: $header-height + 3.5rem !important;
   }
 }
 
