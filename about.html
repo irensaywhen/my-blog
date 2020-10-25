@@ -34,9 +34,23 @@ permalink: "/about"
         class="about-me d-flex align-items-center">
         <div
             class="container">
-            <img
-                alt=""
-                src="">
+            {% capture small_photo_url %}
+                {{ "/assets/img/my_photo-small.jpg" | relative_url }}
+            {% endcapture %}
+
+            {% capture big_photo_url %}
+                {{ "/assets/img/my_photo-1600w.jpg" | relative_url }}
+            {% endcapture %}
+            <picture>
+                <source
+                    media="(min-width: 768px)"
+                    srcset="{{ big_photo_url }}">
+                <source
+                    srcset="{{ small_photo_url }}">
+                <img
+                    alt="Author of the blog"
+                    src="{{ small_photo_url }}">
+            </picture>
             <p
                 class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
@@ -47,9 +61,6 @@ permalink: "/about"
         class="about-blog">
         <div
             class="container">
-            <img
-                alt=""
-                src="">
             <p
                 class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
@@ -58,7 +69,8 @@ permalink: "/about"
     </section>
     <section
         class="cite">
-        <div class="container">
+        <div
+            class="container">
             <p
                 class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
