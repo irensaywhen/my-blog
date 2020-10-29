@@ -88,3 +88,35 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+(function () {
+  let about = document.getElementById('about');
+
+  if (!about) return;
+
+  const observerOptions = {
+    rootMargin: '0px',
+    threshold: 0,
+  };
+
+  let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      console.log(entry);
+    });
+  }, observerOptions);
+
+  // Scroll to next paragraph
+  about.addEventListener('click', event => {
+    let $target = $(event.target);
+
+    if ($target.closest('.navigation-arrow').length === 0) return;
+
+    $('html, body').animate(
+      {
+        scrollTop: $target.closest('.paragraph').next('.paragraph').offset()
+          .top,
+      },
+      2000
+    );
+  });
+})();
