@@ -13,14 +13,16 @@ permalink: "/about"
             <div
                 class="about-item">
                 <p
-                    class="d-flex flex-column justify-content-center align-items-center h-75">
+                    class="d-flex flex-column justify-content-center align-items-center h-75"
+                    id="who-btn">
                     <strong>Who</strong>
                 </p>
             </div>
             <div
                 class="about-item">
                 <p
-                    class="d-flex flex-column justify-content-center align-items-center h-75">
+                    class="d-flex flex-column justify-content-center align-items-center h-75"
+                    id="what-btn">
                     <strong>What</strong>
                 </p>
             </div>
@@ -29,28 +31,59 @@ permalink: "/about"
             class="arrow">
             <i
                 class="fas fa-chevron-down"></i>
-        </section>
-    </div>
+        </div>
+    </section>
     <section
         class="about-me d-flex flex-column justify-content-center">
-        {%- assign text_style = " d-flex align-items-center justify-content-center mx-auto font-bio-rhyme" -%}
-        <p
+        {%- assign text_style = " d-flex flex-column align-items-center justify-content-center mx-auto font-bio-rhyme position-relative paragraph show-on-scroll" -%}
+        <div
             class="{{ text_style }}">
-            Hi :) <br> My name is Iren, and as you may have noticed, this is the place where I'll put my thoughts for everyone to see.
-        </p>
-        
-        <p class="{{ text_style }}">
-            I'm a freelance frontend developer with a focus on template development and customization. Being interested in user experience concepts, I like to think of people's behavior and build delightful products for humans.
-        </p>
-        <p
+            <p
+                class="show-on-scroll">
+                Hi :)
+                <br>
+                My name is Iren, and as you may have noticed, this is the place where I'll put my thoughts for everyone to see.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
             class="{{ text_style }}">
-            When it comes to learning, I always start with fundamental concepts, as I love to understand how things work. Forcing me to dig into every detail of physical proofs, my physics used yo say:  "Don't believe anyone. Even me". He influenced me a lot and not only formed my passion for learning in-depth concepts but also taught me to think critically and mathematically.<br>
-            
-        </p>
-        <p class="{{ text_style }}">
-            When I'm not coding, I walk, talk, and listen to music. As with everything else in my life, I like to dig deep. So I'm passionate about figuring out the internal concepts of albums, their connections, and influences.
-        </p>
-
+            <p
+                class="show-on-scroll">
+                I'm a freelance frontend developer with a focus on template development and customization. Being interested in user experience concepts, I like to think of people's behavior and build delightful products for humans.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                When it comes to learning, I always start with fundamental concepts, as I love to understand how things work.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                One of the biggest influencers on me is my physics teacher. Forcing me to dig into every detail of physical phoofs, he used to say:
+                <span
+                    class="blockquote">
+                    Don't believe anyone. Even me.
+                </span>
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                When I'm not coding, I walk, talk, and listen to music. As with everything else in my life, I like to dig deep.
+                <br>
+                So I'm passionate about figuring out the internal concepts of albums, their connections, and influences.
+            </p>
+            {% include about_arrow.html %}
+        </div>
         {% capture small_photo_url %}
             {{ "/assets/img/my_photo-small.jpg" | relative_url }}
         {% endcapture %}

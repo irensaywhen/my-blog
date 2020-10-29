@@ -33,10 +33,11 @@ main {
 
       .arrow {
         position: absolute;
-        z-index: 3000;
+        z-index: 1000;
         top: 95%;
         left: 50%;
         color: $light;
+        cursor: pointer;
 
         animation-name: arrow;
         animation-iteration-count: infinite;
@@ -116,6 +117,33 @@ main {
       min-height: 200vh;
       text-align: center;
 
+      .arrow-dark {
+        @include ease-out;
+        width: 100%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        animation-name: shine;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+
+        &:hover,
+        &:focus {
+          color: darken($primary, 15);
+        }
+      }
+
+      .show-on-scroll {
+        transition: all 1.5s;
+      }
+
+      .hidden {
+        opacity: 0;
+      }
+
+      .shown {
+        opacity: 1;
+      }
+
       // My photo
       img {
         transition: all 1s;
@@ -134,7 +162,7 @@ main {
         }
       }
 
-      p {
+      .paragraph {
         width: 90%;
         max-width: $description-max-width;
         height: 100vh;

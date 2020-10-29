@@ -21,8 +21,35 @@
   }
 }
 
-// Menu button styles
+.blockquote,
+blockquote {
+  display: inline-block;
+  position: relative;
+  font-style: italic;
+  font-weight: 300;
+  width: 100%;
+  padding: 2.5rem 1rem 2.5rem 0;
+  margin: 4rem auto;
+  font-family: $font-family-serif;
+  font-size: 120%;
+  box-shadow: $red-left-shadow, $red-top-right-shadow;
+  quotes: '\201C''\201D''\2018''\2019';
 
+  &:before {
+    position: absolute;
+    top: 0.3em;
+    left: 0.1em;
+    color: darken($secondary-dark, 30);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.1em;
+    vertical-align: -0.4rem;
+    font-weight: 700;
+  }
+}
+
+// Menu button styles
 .menu-btn {
   position: absolute;
   z-index: 3;

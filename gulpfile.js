@@ -40,8 +40,7 @@ function styles() {
       })
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./assets/css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./assets/css'));
 }
 
 exports.develop = gulp.series(styles, serve, jekyllBuild);
