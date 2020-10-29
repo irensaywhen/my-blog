@@ -101,9 +101,19 @@ $(function () {
 
   let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      console.log(entry);
+      let { target, isIntersecting } = entry;
+
+      if (target.classList.contains('show-on-scroll')) {
+        isIntersecting
+          ? $(target).addClass('shown').removeClass('hidden')
+          : $(target).removeClass('shown').addClass('hidden');
+      }
     });
   }, observerOptions);
+
+  Array.from(about.querySelectorAll('.show-on-scroll')).forEach(item => {
+    observer.observe(item);
+  });
 
   // Scroll to next paragraph
   about.addEventListener('click', event => {
@@ -119,4 +129,6 @@ $(function () {
       2000
     );
   });
+
+  document.getElementById('meet').addEventListener('click', event => {});
 })();

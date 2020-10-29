@@ -77,12 +77,17 @@ permalink: "/about"
         <div
             class="{{ text_style }}">
             <p
-                class="show-on-scroll">
+                class="show-on-scroll mb-5">
                 When I'm not coding, I walk, talk, and listen to music. As with everything else in my life, I like to dig deep.
                 <br>
                 So I'm passionate about figuring out the internal concepts of albums, their connections, and influences.
             </p>
-            {% include about_arrow.html %}
+            <button type="button" class="btn btn-primary" id="meet">
+                Meet me 
+            </button>
+        </div>
+        <div class="my-photo">
+            
         </div>
         {% capture small_photo_url %}
             {{ "/assets/img/my_photo-small.jpg" | relative_url }}
