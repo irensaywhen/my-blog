@@ -144,21 +144,24 @@ main {
         opacity: 1;
       }
 
-      // My photo
-      img {
-        transition: all 1s;
-        display: inline-block;
-        width: 90%;
-        max-width: $my-photo-max-width;
-        height: auto;
-        filter: blur(15px);
-
-        @include screen-sm {
-          width: 75%;
+      .my-photo {
+        transition: all 1.5s;
+        height: 100vh;
+        // My photo
+        img {
+          transition: all 1s;
+          display: inline-block;
+          width: 90%;
+          max-width: $my-photo-max-width;
+          height: auto;
         }
 
-        @include screen-md {
-          width: 50%;
+        &.blurred {
+          filter: blur(15px);
+        }
+
+        &.unblurred {
+          filter: blur(0);
         }
       }
 
@@ -167,18 +170,24 @@ main {
         max-width: $description-max-width;
         height: 100vh;
         font-size: 1.5rem;
+      }
 
-        &:first-of-type {
-          font-size: 2rem;
-          font-weight: 500;
+      &:nth-of-type(2) {
+        .paragraph {
+          &:first-of-type {
+            font-size: 2rem;
+            font-weight: 500;
+          }
         }
       }
     }
 
-    .about-blog {
-      position: relative;
-      background: $light;
-      height: 100vh;
+    .cite {
+      font-size: 2.5rem;
+      blockquote {
+        width: 90%;
+        max-width: $description-max-width;
+      }
     }
   }
 }

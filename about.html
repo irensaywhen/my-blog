@@ -33,8 +33,9 @@ permalink: "/about"
                 class="fas fa-chevron-down"></i>
         </div>
     </section>
+    {% assign about_section_classes = "about-me d-flex flex-column justify-content-center" %}
     <section
-        class="about-me d-flex flex-column justify-content-center">
+        class="{{ about_section_classes }}" id="about-me-first-section"> 
         {%- assign text_style = " d-flex flex-column align-items-center justify-content-center mx-auto font-bio-rhyme position-relative paragraph show-on-scroll" -%}
         <div
             class="{{ text_style }}">
@@ -82,43 +83,93 @@ permalink: "/about"
                 <br>
                 So I'm passionate about figuring out the internal concepts of albums, their connections, and influences.
             </p>
-            <button type="button" class="btn btn-primary" id="meet">
-                Meet me 
+            <button
+                class="btn btn-primary"
+                id="meet"
+                type="button">
+                Ready to meet me?
             </button>
         </div>
-        <div class="my-photo">
-            
+        <!--My photo section-->
+        <div
+            class="my-photo d-flex flex-column align-items-center justify-content-center blur blurred"
+            id="my-photo">
+            {% capture small_photo_url %}
+                {{ "/assets/img/my_photo-small.jpg" | relative_url }}
+            {% endcapture %}
+            {% capture big_photo_url %}
+                {{ "/assets/img/my_photo-1600w.jpg" | relative_url }}
+            {% endcapture %}
+            <picture>
+                <source
+                    media="(min-width: 768px)"
+                    srcset="{{ big_photo_url }}">
+                <source
+                    srcset="{{ small_photo_url }}">
+                <img
+                    alt="Author of the blog"
+                    src="{{ small_photo_url }}">
+            </picture>
+            <button
+                class="btn btn-primary mt-4"
+                id="move-to-blog-description"
+                type="button">
+                Are you still curious about the blog?
+            </button>
         </div>
-        {% capture small_photo_url %}
-            {{ "/assets/img/my_photo-small.jpg" | relative_url }}
-        {% endcapture %}
-        {% capture big_photo_url %}
-            {{ "/assets/img/my_photo-1600w.jpg" | relative_url }}
-        {% endcapture %}
-        <picture>
-            <source
-                media="(min-width: 768px)"
-                srcset="{{ big_photo_url }}">
-            <source
-                srcset="{{ small_photo_url }}">
-            <img
-                alt="Author of the blog"
-                id="my-photo"
-                src="{{ small_photo_url }}">
-        </picture>
+        <!--My photo section end-->
     </section>
     <section
-        class="about-blog">
-        <p
-            class="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
-        </p>
-    </section>
-    <section
-        class="cite">
-        <p
-            class="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate commodi. Sunt eveniet praesentium iste, consectetur dolore omnis tempore voluptas ullam amet temporibus doloribus adipisci, quibusdam maxime, nihil ipsa id.
-        </p>
+        class="{{ about_section_classes }}" id="about-blog-first-section">
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                This blog is going to have three main topics: web development, freelance, and music.
+                <br>
+                The first one is my professional sphere of knowledge, the second is my lifestyle, and the last one is my passion.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                I love to share knowledge. I was working part-time as a private tutor for two years, and, during that period, I discovered an ability to explain complicated concepts in simple words.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                My mission with this blog is to make things a little bit easier for those who got lost.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                But why another music blog? Well, here's the thing.
+                                                                I like to listen to music in albums, analyze them, search for influences, read texts, and then relisten it again and again.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                While working in a boring office on a tiring job, my only air was music. I used to listen up to four new albums a day by traversing across Rate Your Music charts, relistening the old ones meanwhile. I think it'll be exciting to share my thoughts on this topic.
+            </p>
+            {% include about_arrow.html %}
+        </div>
+        <div
+            class="{{ text_style }}">
+            <p
+                class="show-on-scroll">
+                I hope you'll enjoy reading it. :) Don't be sad if you haven't found a topic in which you're interested. The blog is small so far since it's just getting alive.
+            </p>
+        </div>
     </section>
 </main>
