@@ -37,6 +37,11 @@
   clampElements.forEach(element => $clamp(element, { clamp: 4 }));
 })();
 
+$(function () {
+  console.log($('[data-toggle="tooltip"]'));
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 // Copy email address on click
 (function () {
   const email = document.getElementById('email');
@@ -84,10 +89,6 @@
     }, 1000);
   });
 })();
-
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-});
 
 (function () {
   let about = document.getElementById('about');
