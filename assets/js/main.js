@@ -38,16 +38,14 @@
 })();
 
 $(function () {
-  console.log($('[data-toggle="tooltip"]'));
   $('[data-toggle="tooltip"]').tooltip();
 });
 
 // Copy email address on click
 (function () {
-  const email = document.getElementById('email');
-  const emailAddress = email.dataset.email,
-    tooltipInitialTitle = email.title,
-    $email = $(email);
+  const $email = $('.email');
+  const emailAddress = $email.first().data('email'),
+    tooltipInitialTitle = $email.attr('title');
 
   let emailCopied = false;
 
@@ -68,12 +66,15 @@ $(function () {
     document.body.removeChild(dummy);
   }
 
-  $email.click(event => {
+  document.addEventListener('click', event => {
+    let $target = $(event.target).closest('.email');
+    if ($target.length === 0) return;
+
     event.preventDefault();
 
     copyToClipboard(emailAddress);
 
-    $email
+    $target
       .tooltip('dispose')
       .first()
       .attr('title', 'Copied!')
@@ -81,7 +82,7 @@ $(function () {
       .tooltip('show');
 
     setTimeout(() => {
-      $email
+      $target
         .tooltip('dispose')
         .first()
         .attr('title', tooltipInitialTitle)
