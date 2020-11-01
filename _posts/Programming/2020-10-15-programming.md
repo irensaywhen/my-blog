@@ -1,7 +1,9 @@
 ---
 title: The latest post about programming
 subtitle: 'Lets talk about programming...'
-thumbnail: 'iren_rhyme5pic.png'
+thumbnail: 'kurtka-big.jpg'
+thumbnail_preview: 'kurtka-square.jpg'
+thumbnail_social_media: 'kurtka-twitter.jpg'
 thumbnail_alt: 'Duck typing'
 thumbnail_description: 'Duck typing is a new concept'
 categories:

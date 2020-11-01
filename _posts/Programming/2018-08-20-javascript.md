@@ -2,7 +2,9 @@
 title: javascript title
 slug: post-about-javascript
 permalink: '/:slugified_categories/:title'
-thumbnail: 'IMG_20170708_210957.jpg'
+thumbnail: 'kurtka-big.jpg'
+thumbnail_preview: 'kurtka-square.jpg'
+thumbnail_social_media: 'kurtka-twitter.jpg'
 thumbnail_alt: 'Baikal photo 2'
 categories:
   - web development

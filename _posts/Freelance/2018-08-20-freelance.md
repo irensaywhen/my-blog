@@ -2,7 +2,9 @@
 title: Post about freelance
 slug: post-about-freelance
 permalink: '/:slugified_categories/:title'
-thumbnail: 'IMG_20170707_200428.jpg'
+thumbnail: 'kurtka-big.jpg'
+thumbnail_preview: 'kurtka-square.jpg'
+thumbnail_social_media: 'kurtka-twitter.jpg'
 thumbnail_alt: 'Baikal photo 1'
 categories:
   - freelance

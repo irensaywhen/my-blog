@@ -2,7 +2,9 @@
 title: Post about programming
 slug: post-about-programming-2
 permalink: '/:slugified_categories/:title'
-thumbnail: '28571670.png'
+thumbnail: 'kurtka-big.jpg'
+thumbnail_preview: 'kurtka-square.jpg'
+thumbnail_social_media: 'kurtka-twitter.jpg'
 thumbnail_alt: 'Duck typing'
 categories:
   - web development

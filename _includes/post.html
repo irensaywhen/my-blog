@@ -7,7 +7,7 @@
             <a
                 href="{{ post.url | relative_url }}">
                 {% capture thumbnail_url %}
-                    {{ post.thumbnail | prepend: 'assets/img/' | relative_url }}
+                    {{ post.thumbnail_preview | prepend: 'assets/img/' | relative_url }}
                 {% endcapture %}
                 <img
                     class="card-img-top"
