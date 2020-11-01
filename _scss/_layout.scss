@@ -17,15 +17,7 @@ header {
   top: 0;
   z-index: 1;
   background: $light;
-  width: 100vw;
-
-  ul {
-    height: 100% !important;
-
-    li {
-      height: 100% !important;
-    }
-  }
+  width: 100%;
 
   .social-link {
     @extend .btn-light;

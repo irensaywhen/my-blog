@@ -1,30 +1,36 @@
+<!--New navigation-->
 <nav
-    class="d-flex justify-content-between align-items-center px-2 py-2 py-sm-1 text-left">
-                    
-    <!--Site logo-->
-    <div>
-        {%- include logo.html -%}
-        <p class="font-bio-rhyme small mb-0 font-weight-bolder text-right">
-            freelance, webdev, music insights 
-        </p>
-    </div>
-
-    <!--Site sections start-->
-    <ul
-        class="d-none pl-0 list-unstyled text-left d-md-flex flex-md-row align-items-md-center justify-content-around h-100 mb-0 mr-0">
-        {%- include sections_items.html -%}
-    </ul>
-    <!--Site sections end-->
-
-    <!--Menu button-->
+    class="container-md text-left">
     <div
-        class="menu-btn d-md-none" 
-        id="menu-btn">
+        class="row justify-content-between py-2">
+        <!--Site logo-->
         <div
-            class="btn-line"></div>
+            class="col-auto">
+            {%- include logo.html -%}
+        </div>
+        <!--Sections amd menu btn-->
         <div
-            class="btn-line"></div>
-        <div
-            class="btn-line"></div>
+            class="col-auto">
+            <!--Site sections start-->
+            <ul
+                class="d-none pl-0 list-unstyled text-left d-md-flex flex-md-row align-items-md-center justify-content-around h-100 mb-0 mr-0">
+                {%- include sections_items.html -%}
+            </ul>
+            <!--Menu button-->
+            <div
+                class="h-100 d-flex align-items-center justify-content-center d-md-none">
+                
+                <div
+                    class="menu-btn"
+                    id="menu-btn">
+                    <div
+                        class="btn-line"></div>
+                    <div
+                        class="btn-line"></div>
+                    <div
+                        class="btn-line"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>

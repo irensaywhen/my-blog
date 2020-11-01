@@ -51,10 +51,7 @@ blockquote {
 
 // Menu button styles
 .menu-btn {
-  position: absolute;
   z-index: 3;
-  right: map-get($spacers, 3);
-  top: 20px;
   cursor: pointer;
   @include ease-out;
 
@@ -102,8 +99,8 @@ blockquote {
   background: $primary;
   transform: translate(-100%, 0);
 
-  .logo-link {
-    padding: map-get($spacers, 2);
+  .logo-wrapper {
+    padding-right: 10vw;
   }
 
   .category {

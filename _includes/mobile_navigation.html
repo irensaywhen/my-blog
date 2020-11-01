@@ -1,9 +1,10 @@
 <nav
     class="menu text-center d-flex flex-column align-items-center" id="mobile-menu">
     
-    <!--Sections list-->
+    
     <ul
         class="pl-0 list-unstyled sections d-flex align-items-center py-2 pl-2">
+        {%- include logo.html -%}
         {%- include sections_items.html -%}
     </ul>
 
@@ -12,7 +13,7 @@
             Categories
         </h2>
     
-        <!--Categories list-->
+        
         <ul
             class="list-unstyled d-flex flex-wrap justify-content-center px-3 py-2 mt-2">
             {%- include categories_items.html -%}
