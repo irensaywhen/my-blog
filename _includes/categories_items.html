@@ -5,7 +5,7 @@
     <li
         class="category">
         <a
-            href="{{ category_url }}" class="btn btn-small btn-light font-bio-rhyme font-weight-bolder {%- if page.url == category_url -%} active {%- endif -%}">
+            href="{{ category_url }}" class="btn btn-small btn-light font-weight-bolder font-bio-rhyme {%- if page.url == category_url -%} active {%- endif -%}">
             {{ category | first }}</a>
     </li>
 {%- endfor -%}

@@ -1,5 +1,7 @@
 <header>
     {%- include sections_navigation.html -%}
+    {% unless page.url == "/about" %}
     {%- include categories_navigation.html -%}
+    {% endunless %}
     {%- include mobile_navigation.html -%}
 </header>
