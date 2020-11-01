@@ -2,11 +2,7 @@
     <a
         class="btn btn-secondary"
         href={{ page.title | url_encode | prepend: "https://twitter.com/intent/tweet?text="}}
-        url={{ page.url | absolute_url }}
+        url={{ page.url | prepend: site.url }}
         via="irensaywhen">
         <i class="fab fa-twitter"></i> &nbsp; Share on twitter</a>
-        {{page.url | absolute_url}}
-        {{page.url}}
-
-        {{site.url}}
 </div>
