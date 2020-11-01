@@ -4,6 +4,7 @@ exclude:
   - gulpfile.js
 
 baseurl: '/'
+url: 'https://naughty-benz-71351a.netlify.app/'
 
 related_posts_amount: 4
 
