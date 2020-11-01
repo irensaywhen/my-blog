@@ -9,6 +9,13 @@
   box-shadow: unset;
 }
 
+@mixin btn-secondary-active {
+  background: $secondary-dark !important;
+  color: $light !important;
+  border: 1px solid $secondary-dark;
+  box-shadow: unset;
+}
+
 //Media Query Mixins
 @mixin screen-sm {
   @media screen and (min-width: map-get($grid-breakpoints, sm)) {

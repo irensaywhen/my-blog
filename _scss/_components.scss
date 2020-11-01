@@ -153,3 +153,19 @@ blockquote {
     border: 1px solid $light !important;
   }
 }
+
+.btn-secondary {
+  &:hover,
+  &:focus {
+    @include btn-secondary-active;
+  }
+
+  &:active {
+    @include btn-secondary-active;
+  }
+
+  &:active {
+    background: $secondary !important;
+    border: 1px solid $secondary !important;
+  }
+}
