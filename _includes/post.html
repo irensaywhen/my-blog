@@ -30,8 +30,10 @@
             {{ post.excerpt }}
         </div>
         <div
-            class="card-footer border-0 bg-white pt-0">
+            class="card-footer border-0 bg-white pb-3">
             {% include post_tags.html %}
+            <div class="pt-3 w-100"></div>
+            {% include read_more.html %}
         </div>
     </div>
 </article>

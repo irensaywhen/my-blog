@@ -22,10 +22,7 @@
             <!--Read more button-->
         </div>
         <div class="card-footer border-0 bg-white pt-0">
-            <a
-                href="{{ post.url | relative_url }}" class="mt-2 btn btn-small btn-secondary">
-                Read more
-            </a>
+            {% include read_more.html %}
         </div>
     </div>
 </article>

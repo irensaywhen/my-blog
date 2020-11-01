@@ -15,7 +15,7 @@
             src="{{ thumbnail_url }}" alt="{{ latest_post.thumbnail_alt }}" class="w-100 mw-100">
     </a>
     <div
-        class="px-3">
+        class="px-3 pb-3">
         <!--Post title-->
         <h2
             class="py-2">
@@ -28,5 +28,6 @@
         {{ latest_post.excerpt }}
         {% assign post = latest_post%}
         {% include post_tags.html %}
+        {% include read_more.html %}
     </div>
 </article>
