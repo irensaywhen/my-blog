@@ -136,21 +136,6 @@ $(function () {
   // Observe photo section
   observer.observe(myPhotoSection);
 
-  // Scroll to next paragraph
-  about.addEventListener('click', event => {
-    let $target = $(event.target);
-
-    if ($target.closest('.navigation-arrow').length === 0) return;
-
-    $('html, body').animate(
-      {
-        scrollTop: $target.closest('.paragraph').next('.paragraph').offset()
-          .top,
-      },
-      scrollTime
-    );
-  });
-
   document.getElementById('meet').addEventListener('click', event => {
     $('html, body').animate(
       {
@@ -160,32 +145,31 @@ $(function () {
     );
   });
 
-  document
-    .getElementById('move-to-blog-description')
-    .addEventListener('click', event => {
+  document.addEventListener('click', event => {
+    let $target = $(event.target);
+
+    if ($target.closest('.move-to-about-me-section').length !== 0) {
+      $('html, body').animate(
+        {
+          scrollTop: $(aboutMeFirstSection).offset().top,
+        },
+        scrollTime
+      );
+    } else if ($target.closest('.move-to-blog-description').length !== 0) {
       $('html, body').animate(
         {
           scrollTop: $(aboutBlogFirstSection).offset().top,
         },
         scrollTime
       );
-    });
-
-  document.getElementById('who-btn').addEventListener('click', event => {
-    $('html, body').animate(
-      {
-        scrollTop: $(aboutMeFirstSection).offset().top,
-      },
-      scrollTime
-    );
-  });
-
-  document.getElementById('what-btn').addEventListener('click', event => {
-    $('html, body').animate(
-      {
-        scrollTop: $(aboutBlogFirstSection).offset().top,
-      },
-      scrollTime
-    );
+    } else if ($target.closest('.navigation-arrow').length !== 0) {
+      $('html, body').animate(
+        {
+          scrollTop: $target.closest('.paragraph').next('.paragraph').offset()
+            .top,
+        },
+        scrollTime
+      );
+    }
   });
 })();
