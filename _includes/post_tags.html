@@ -1,5 +1,5 @@
 <ul
-    class="list-unstyled d-flex flex-wrap pt-2">
+    class="list-unstyled {% if layout.page_type == 'post' %} d-inline-flex {% else %} d-flex {% endif %} flex-wrap pt-2">
     {%- for tag in post.tags -%}
         {%- capture tag_url -%}
             {{ tag | slugify |  prepend: site.data.archives.tag }}

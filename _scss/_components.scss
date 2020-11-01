@@ -169,3 +169,19 @@ blockquote {
     border: 1px solid $secondary !important;
   }
 }
+
+.new {
+  position: absolute;
+  background: $secondary;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  top: 1rem;
+  left: -0.4rem;
+}
+
+.share {
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  line-height: 1.1;
+}

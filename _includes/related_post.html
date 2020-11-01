@@ -3,7 +3,7 @@
     <div
         class="card h-100">
         {% capture thumbnail_url %}
-            {{ post.thumbnail | prepend: 'assets/img/' | relative_url }}
+            {{ post.thumbnail_preview | prepend: 'assets/img/' | relative_url }}
         {% endcapture %}
         <a
             href="{{ thumbnail_url }}">

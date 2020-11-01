@@ -1,5 +1,6 @@
 ---
 layout: default
+page_type: 'post'
 ---
 {% assign post = page%}
 <main>
@@ -15,18 +16,21 @@ layout: default
                 </h1>
                 <!--Post date-->
                 <div
-                    class="d-flex align-items-center justify-content-between">
+                    class="d-flex mt-2 justify-content-between">
                     <time
                         class="small d-inline-block text-left text-muted pr-4">
                         <i
                             class="far fa-clock"></i>&nbsp;
                         {%- include post_date.html -%}
                     </time>
-                    {% include share.html %}
+                    <span
+                        class="align-self-center">
+                        {% include share.html %}
+                    </span>
                 </div>
                 {% if post.subtitle %}
                     <p
-                        class="mb-3 font-weight-light">
+                        class="font-weight-light">
                         {{ post.subtitle }}
                     </p>
                 {% endif %}
@@ -35,7 +39,7 @@ layout: default
                     {{ post.thumbnail | prepend: 'assets/img/' | relative_url }}
                 {% endcapture %}
                 <figure
-                    class="text-left mb-3">
+                    class="text-left my-3">
                     <img
                         src={{ thumbnail_url }} class="mw-100 h-auto"
                         alt="{{ post.thumbnail_alt }}">
@@ -48,22 +52,27 @@ layout: default
             </div>
             <div
                 class="col-12">
-                {% include post_tags.html %}
+                <div
+                    class="d-flex justify-content-between align-items-center">
+                    {% include post_tags.html %}
+                    {% include share.html %}
+                </div>
             </div>
         </article>
     </section>
     <!--Related posts section-->
     <section
         class="container-md">
-        <div class="row">
         <div
-            class="col-12">
-            <h2
-                class="h4 mb-0 mt-5">
-                You may also like:
-            </h2>
+            class="row">
+            <div
+                class="col-12">
+                <h2
+                    class="h4 mb-0 mt-5">
+                    You may also like:
+                </h2>
+            </div>
+            {% include related_posts.html %}
         </div>
-        {% include related_posts.html %}
-    </div>
     </section>
 </main>

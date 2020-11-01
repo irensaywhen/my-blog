@@ -1,8 +1,6 @@
-<div>
-    <a
-        class="btn btn-secondary"
-        href={{ page.title | url_encode | prepend: "https://twitter.com/intent/tweet?text="}}
-        url={{ page.url | prepend: site.url }}
-        via="irensaywhen">
-        <i class="fab fa-twitter"></i> &nbsp; Share on twitter</a>
-</div>
+<a
+    class="btn btn-secondary share"
+    href={{ page.title | url_encode | prepend: "https://twitter.com/intent/tweet?text="}} url={{ page.url | prepend: site.url }} via="irensaywhen">
+    <i
+        class="fab fa-twitter"></i>
+    &nbsp; Share on twitter</a>
