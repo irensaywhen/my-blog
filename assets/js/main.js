@@ -37,9 +37,16 @@
   clampElements.forEach(element => $clamp(element, { clamp: 4 }));
 })();
 
+// Tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+// Set copyright year
+(function () {
+  let copyrightYearContainer = document.getElementById('copyrightYear');
+  copyrightYearContainer.textContent = new Date().getFullYear();
+})();
 
 // Copy email address on click
 (function () {

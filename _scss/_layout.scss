@@ -18,6 +18,41 @@ header {
   z-index: 1;
   background: $light;
   width: 100vw;
+
+  ul {
+    height: 100% !important;
+
+    li {
+      height: 100% !important;
+    }
+  }
+
+  .social-link {
+    @extend .btn-light;
+    height: 100%;
+  }
+}
+
+footer {
+  .social-link {
+    color: $info;
+
+    &:hover,
+    &:focus {
+      color: lighten($info, 10);
+    }
+  }
+
+  .footer-nav {
+    .category {
+      a {
+        &:hover,
+        &:focus {
+          color: lighten($info, 10) !important;
+        }
+      }
+    }
+  }
 }
 
 .logo-link {

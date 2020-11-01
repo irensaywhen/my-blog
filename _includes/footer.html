@@ -1,5 +1,49 @@
-<!--<footer class="bg-primary text-white">
-    <div class="container">
+<footer
+    class="bg-primary text-white py-3">
+    <div
+        class="container">
+        <div
+            class="row">
+            <div
+                class="col-12 text-center">
+                {% include social_links.html %}
+            </div>
+            <div
+                class="col-12 text-center py-2">
+                <ul
+                    class="list-unstyled mb-0 footer-nav">
+                    <!--Navigation across pages-->
+                    {% for item in site.data.navigation %}
+                        {%- capture item_relative_url -%}
+                            {{item.link | relative_url}}
+                        {%- endcapture -%}
+                        <li
+                            class="category mr-0 mr-md-2 px-3">
+                            <a
+                                href="{{ item_relative_url }}" class="text-info">
+                                {{ item.name }}
+                            </a>
 
+                        </li>
+                    {% endfor %}
+                    <!--Categories-->
+                    {%- for category in site.categories -%}
+                        {%- capture category_url -%}
+                            {{ category | first | slugify |  prepend: site.data.archives.category | relative_url }}
+                        {%- endcapture -%}
+                        <li
+                            class="category px-3">
+                            <a
+                                href="{{ category_url }}" class="text-info">
+                                {{ category | first }}</a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+            <div class="col-12 text-info text-center">
+                <i class="far fa-copyright"></i> Copyright &nbsp;
+                <span id="copyrightYear"></span>
+            </div>
+        </div>
     </div>
-</footer>-->
+</footer>
