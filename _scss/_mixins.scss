@@ -2,6 +2,13 @@
   font-family: $font-family-serif;
 }
 
+@mixin btn-light-active {
+  background: $secondary !important;
+  color: $light !important;
+  border: 1px solid $secondary;
+  box-shadow: unset;
+}
+
 //Media Query Mixins
 @mixin screen-sm {
   @media screen and (min-width: map-get($grid-breakpoints, sm)) {
