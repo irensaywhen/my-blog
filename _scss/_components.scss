@@ -100,7 +100,14 @@ blockquote {
   transform: translate(-100%, 0);
 
   .logo-wrapper {
-    padding-right: 10vw;
+    width: 100%;
+    background: $light;
+    padding: 0.75rem 0 0 1.2rem;
+    text-align: left !important;
+
+    p {
+      text-align: left !important;
+    }
   }
 
   .category {

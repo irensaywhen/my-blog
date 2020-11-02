@@ -189,4 +189,34 @@ main {
       }
     }
   }
+
+  // 404 page
+  &.not-found {
+    min-height: 80vh;
+    text-align: center;
+
+    img {
+      width: auto;
+      max-height: 60vh;
+      max-width: 90%;
+
+      @include screen-md {
+        width: 90%;
+        max-width: 800px;
+      }
+    }
+
+    .options {
+      width: 90%;
+      max-width: 22rem;
+
+      .btn {
+        width: 100%;
+
+        @include screen-md {
+          width: 45%;
+        }
+      }
+    }
+  }
 }

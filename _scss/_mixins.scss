@@ -2,6 +2,10 @@
   font-family: $font-family-serif;
 }
 
+.font-base {
+  font-family: $font-family-base;
+}
+
 @mixin btn-light-active {
   background: $secondary !important;
   color: $light !important;

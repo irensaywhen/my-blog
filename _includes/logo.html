@@ -1,8 +1,16 @@
-<div class="logo-wrapper">
+<div
+    class="logo-wrapper">
+    {% capture logo_url %}
+        {% if dark_logo %}
+            {{"/assets/img/lips_logotype_invert.svg" | relative_url }}
+        {% else %}
+            {{"/assets/img/lips_logotype.svg" | relative_url }}
+        {% endif %}
+    {% endcapture %}
     <a
         href="{{ site.baseurl }}" class="logo-link">
         <img
-            src={{"/assets/img/lips.svg" | relative_url }} class="logo"
+            src={{ logo_url }} class="logo"
             alt="Blog logo">
     </a>
     <p

@@ -4,7 +4,7 @@ exclude:
   - gulpfile.js
 
 baseurl: '/'
-url: 'https://naughty-benz-71351a.netlify.app/'
+url: 'https://irensaysblog.netlify.app/'
 
 related_posts_amount: 4
 
@@ -67,3 +67,7 @@ autopages:
     slugify:
       mode: 'default' # :tag is slugified.
       case: false
+
+compress_html:
+  ignore:
+    envs: ['development']
