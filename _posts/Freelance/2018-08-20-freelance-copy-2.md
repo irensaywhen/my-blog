@@ -1,5 +1,6 @@
 ---
 title: Freelance!
+description: A post about freelance
 slug: post-about-freelance-4
 permalink: '/:slugified_categories/:title'
 thumbnail: 'kurtka-big.jpg'

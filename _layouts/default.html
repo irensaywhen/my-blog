@@ -10,6 +10,33 @@ layout: compress
         <meta
             content="width=device-width, initial-scale=1.0"
             name="viewport"/>
+        <!--Social media meta tags start-->
+        <!--Description-->
+        {%- capture page_description -%}
+            {%- if page.description -%}
+                {{ page.description }}
+            {%- else -%}
+                {{ layout.description }}
+            {%- endif -%}
+        {%- endcapture -%}
+        <meta
+            content="{{ page_description }}" property="og:description">
+        <!--Thumbnail-->
+        {%- capture thumbnail_url -%}
+            {%- if page.thumbnail_preview -%}
+                {{ page.thumbnail_preview  | prepend: 'assets/img/' | prepend: site.url }}
+            {%- else -%}
+                {{ 'assets/img/default_social_media_preview.jpg' | prepend: site.url }}
+            {%- endif -%}
+        {%- endcapture -%}
+        <meta
+            content="{{ thumbnail_url }}"
+            property="og:image">
+        <meta
+            content="summary_large_image"
+            name="twitter:card">
+        {% seo %}
+        <!--Social media meta tags end-->
         <title>{{ page.title }}</title>
         <link
             rel="stylesheet"
@@ -44,7 +71,6 @@ layout: compress
         <script
             crossorigin="anonymous"
             src="https://kit.fontawesome.com/5794ad2a68.js"></script>
-        {% seo %}
     </head>
     <body>
         <div
