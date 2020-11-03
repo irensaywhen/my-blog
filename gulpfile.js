@@ -52,12 +52,12 @@ function js() {
   return gulp
     .src(['./js/clamp.min.js', './js/main.js'])
     .pipe(plumber())
+    .pipe(concat('main.js'))
     .pipe(
       babel({
         presets: [['@babel/preset-env', { targets: 'defaults' }]],
       })
     )
-    .pipe(concat('main.js'))
     .pipe(terser())
     .pipe(gulp.dest('./assets/js'));
 }

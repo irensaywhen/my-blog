@@ -33,8 +33,13 @@
   const clampElements = Array.from(
     document.querySelectorAll('.clamp-excerpt p')
   );
-  // Clamp text
   clampElements.forEach(element => $clamp(element, { clamp: 4 }));
+})();
+
+// Lazy loading
+(function () {
+  const observer = lozad();
+  observer.observe();
 })();
 
 // Tooltips

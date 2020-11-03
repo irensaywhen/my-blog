@@ -12,7 +12,7 @@
             {{ latest_post.thumbnail | prepend: 'assets/img/' | relative_url }}
         {% endcapture %}
         <img
-            src="{{ thumbnail_url }}" alt="{{ latest_post.thumbnail_alt }}" class="w-100 mw-100">
+            data-src="{{ thumbnail_url }}" alt="{{ latest_post.thumbnail_alt }}" class="w-100 mw-100 lozad">
     </a>
     <div
         class="px-3 pb-3">

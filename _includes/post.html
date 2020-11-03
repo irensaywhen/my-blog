@@ -10,8 +10,8 @@
                     {{ post.thumbnail_preview | prepend: 'assets/img/' | relative_url }}
                 {% endcapture %}
                 <img
-                    class="card-img-top"
-                    src="{{ thumbnail_url }}" alt="{{ post.thumbnail_alt }}">
+                    class="card-img-top lozad"
+                    data-src="{{ thumbnail_url }}" alt="{{ post.thumbnail_alt }}">
             </a>
             <time
                 class="small d-block w-100 text-right pt-1 pb-2 pr-2 text-muted">
