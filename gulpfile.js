@@ -5,6 +5,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const child = require('child_process');
+const concat = require('gulp-concat');
+const terser = require('gulp-terser');
 
 function jekyllBuild(done) {
   return child
@@ -27,6 +29,7 @@ function serve(done) {
   );
 
   gulp.watch('_scss/**/*.scss', styles);
+  gulp.watch('./js/**/*.js', js);
 }
 
 function styles() {
@@ -43,4 +46,12 @@ function styles() {
     .pipe(gulp.dest('./assets/css'));
 }
 
-exports.develop = gulp.series(styles, serve, jekyllBuild);
+function js() {
+  return gulp
+    .src(['./js/clamp.min.js', './js/main.js'])
+    .pipe(concat('main.js'))
+    .pipe(terser())
+    .pipe(gulp.dest('./assets/js'));
+}
+
+exports.develop = gulp.series(styles, js, serve, jekyllBuild);
