@@ -4,7 +4,7 @@ slug: post-about-javascript
 permalink: '/:slugified_categories/:title'
 thumbnail: 'kurtka-big.jpg'
 thumbnail_preview: 'kurtka-square.jpg'
-image: 'kurtka-twitter.jpg'
+image: '/assets/img/kurtka-twitter.jpg'
 thumbnail_alt: 'Baikal photo 2'
 categories:
   - web development
