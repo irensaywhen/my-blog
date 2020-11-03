@@ -4,7 +4,7 @@ exclude:
   - gulpfile.js
 
 baseurl: '/'
-url: 'https://irensaysblog.netlify.app/'
+url: 'https://irensaysblog.netlify.app'
 
 related_posts_amount: 4
 
@@ -25,6 +25,8 @@ defaults:
       path: ''
     values:
       layout: 'default'
+      image: '/assets/img/default_social_media_preview.jpg'
+      description: 'IrenSays blog - a blog about programming, freelancing, and music.'
 
 plugins:
   - jekyll-paginate-v2

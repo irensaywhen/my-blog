@@ -3,7 +3,7 @@ title: The latest post about programming
 subtitle: 'Lets talk about programming...'
 thumbnail: 'kurtka-big.jpg'
 thumbnail_preview: 'kurtka-square.jpg'
-thumbnail_social_media: 'kurtka-twitter.jpg'
+image: 'kurtka-twitter.jpg'
 thumbnail_alt: 'Duck typing'
 thumbnail_description: 'Duck typing is a new concept'
 categories:

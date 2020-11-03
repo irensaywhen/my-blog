@@ -5,7 +5,7 @@ slug: post-about-freelance-4
 permalink: '/:slugified_categories/:title'
 thumbnail: 'kurtka-big.jpg'
 thumbnail_preview: 'kurtka-square.jpg'
-thumbnail_social_media: 'kurtka-twitter.jpg'
+image: 'kurtka-twitter.jpg'
 thumbnail_alt: 'Baikal photo 1'
 categories:
   - freelance
