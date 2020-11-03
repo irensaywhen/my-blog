@@ -7,6 +7,8 @@ const browserSync = require('browser-sync').create();
 const child = require('child_process');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
+const babel = require('gulp-babel');
+const plumber = require('gulp-plumber');
 
 function jekyllBuild(done) {
   return child
@@ -49,6 +51,12 @@ function styles() {
 function js() {
   return gulp
     .src(['./js/clamp.min.js', './js/main.js'])
+    .pipe(plumber())
+    .pipe(
+      babel({
+        presets: [['@babel/preset-env', { targets: 'defaults' }]],
+      })
+    )
     .pipe(concat('main.js'))
     .pipe(terser())
     .pipe(gulp.dest('./assets/js'));
