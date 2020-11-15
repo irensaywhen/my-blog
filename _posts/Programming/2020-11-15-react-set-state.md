@@ -1,6 +1,6 @@
 ---
 title: 'React setState: the Right Way'
-description: 'React setState: the right way'
+description: "In this tutorial, I'll explain how to change the state in React components using built-in setState method. I'll cover in detail two different approaches of using this method, explain the differences between these approaches, and show when to use which. "
 slug: react-setstate
 thumbnail: 'react-set-state43-20.jpg'
 thumbnail_preview: 'react-set-state11-20.jpg'
