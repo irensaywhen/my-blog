@@ -1,5 +1,5 @@
 ---
-title: 'React setState: the Right way'
+title: 'React setState: the Right Way'
 description: 'React setState: the right way'
 slug: react-setstate
 thumbnail: 'react-set-state43-20.jpg'

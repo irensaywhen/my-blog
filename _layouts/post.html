@@ -16,17 +16,13 @@ page_type: 'post'
                 </h1>
                 <!--Post date-->
                 <div
-                    class="d-flex mt-2 justify-content-between">
+                    class="d-flex justify-content-between align-items-start">
                     <time
                         class="small d-inline-block text-left text-muted pr-4">
                         <i
                             class="far fa-clock"></i>&nbsp;
                         {%- include post_date.html -%}
                     </time>
-                    <span
-                        class="align-self-center">
-                        {% include share.html %}
-                    </span>
                 </div>
                 {% if post.subtitle %}
                     <p
