@@ -1,6 +1,9 @@
+{% capture url%}
+{{ page.url | prepend: site.url }}
+{% endcapture %}
 <a
-    class="btn btn-secondary share"
-    href={{ page.title | url_encode | prepend: "https://twitter.com/intent/tweet?text="}} url={{ page.url | prepend: site.url }} via="irensaywhen">
+    class="btn btn-secondary share twitter-share-button"
+    href={{ page.title | url_encode | prepend: "https://twitter.com/intent/tweet?text=" | append: '&url=' | append: url }} via="irensaywhen">
     <i
         class="fab fa-twitter"></i>
     &nbsp; Share on twitter</a>
