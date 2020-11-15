@@ -17,7 +17,7 @@ In this tutorial, I'll explain how to change the state in React components using
 
 <!--more-->
 
-## TD;DR
+## TL;DR
 
 1. Use `this.setState` function to change the state of your components
 2. If you don't depend on the old state, pass in the `this.setState` method an object with the new values
