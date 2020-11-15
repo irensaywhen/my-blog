@@ -12,9 +12,13 @@ const plumber = require('gulp-plumber');
 
 function jekyllBuild(done) {
   return child
-    .spawn('bundle.bat', ['exec', 'jekyll', 'build', '--watch', '--trace'], {
-      stdio: 'inherit',
-    })
+    .spawn(
+      'bundle.bat',
+      ['exec', 'jekyll', 'build', '--watch', '--trace', '--drafts'],
+      {
+        stdio: 'inherit',
+      }
+    )
     .on('close', done);
 }
 

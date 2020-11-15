@@ -23,6 +23,13 @@ defaults:
       excerpt_separator: <!--more-->
   - scope:
       path: ''
+      type: 'drafts'
+    values:
+      layout: 'post'
+      permalink: '/:slugified_categories/:title'
+      excerpt_separator: <!--more-->
+  - scope:
+      path: ''
     values:
       layout: 'default'
       image: '/assets/img/default_social_media_preview.jpg'
