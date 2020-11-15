@@ -10,6 +10,15 @@ main {
       p:last-of-type {
         margin: 0 !important;
       }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 2.5rem auto 1.3rem;
+      }
     }
 
     img {
