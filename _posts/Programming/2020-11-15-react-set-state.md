@@ -161,7 +161,7 @@ export default class App extends Component {
 
 In the code above, I'm displaying the title in the `<h1>` tag which I store inside the state. When the button is clicked, the title won't disappear.
 
-## Updating state depending on the previous values
+## Updating state depending on the previous state
 
 So far, so good. But what if we want to increment our previous counter when the button is clicked?
 Technically, the following code will work as intended:
@@ -232,7 +232,7 @@ let oldCounter = this.state.counter;
 this.setState({ counter: ++oldCounter });
 ```
 
-Since numbers are (almost always)primitives in javascript, there won't be any warnings in the console. But this is still not the right way to go.
+Since numbers are primitives in javascript, there won't be any warnings in the console. But this is still not the right way to go.
 The truth is that React updates state asynchronously even if the `this.setState` method is called synchronously. So when you update your state this way, you can't reliably say that this is the lates version of the state.
 It's not a problem here since we have a tiny application, and all the updates occur almost immediately, but in bigger apps, it may cause problems. So, use a function if you want to update your state depending on the previous values.
 
