@@ -15,6 +15,15 @@
         {% endif %}
     {% endfor %}
     {% if same_tag_count >= min_common_tags %}
+        {% if posts_displayed == 0 %}
+            <div
+                class="col-12">
+                <h2
+                    class="h4 mb-0 mt-5">
+                    You may also like:
+                </h2>
+            </div>
+        {% endif %}
         {% include related_post.html %}
         {% assign posts_displayed  = posts_displayed  | plus: 1 %}
         {% if posts_displayed  >= max_amount_of_posts %}

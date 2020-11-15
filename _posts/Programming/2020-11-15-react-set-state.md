@@ -2,9 +2,9 @@
 title: 'React setState: the Right way'
 description: 'React setState: the right way'
 slug: react-setstate
-thumbnail: 'kurtka-big.jpg'
-thumbnail_preview: 'kurtka-square.jpg'
-image: '/assets/img/kurtka-twitter.jpg'
+thumbnail: 'react-set-state43-20.jpg'
+thumbnail_preview: 'react-set-state11-20.jpg'
+image: '/assets/img/react-set-state21-20.jpg'
 thumbnail_alt: 'Baikal photo 1'
 categories:
   - web development
@@ -12,6 +12,8 @@ tags:
   - react
   - javascript
 ---
+
+In this tutorial, I'll explain how to change the state in React components using built-in `setState` method. I'll cover in detail two different approaches of using this method, explain the differences between these approaches, and show when to use which. In the end, I'll discuss the common pitfalls that may occur when changing the state.
 
 <!--more-->
 
