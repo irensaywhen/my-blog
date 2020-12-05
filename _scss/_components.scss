@@ -26,6 +26,7 @@ blockquote {
   display: inline-block;
   position: relative;
   font-style: italic;
+  text-align: center;
   font-weight: 300;
   width: 100%;
   padding: 2.5rem 1rem 2.5rem 0;
@@ -46,6 +47,10 @@ blockquote {
     margin-right: 0.1em;
     vertical-align: -0.4rem;
     font-weight: 700;
+  }
+
+  strong {
+    font-weight: 600;
   }
 }
 
