@@ -178,3 +178,23 @@ $(function () {
     }
   });
 })();
+
+function pow(x, n) {
+  let result = 1;
+
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+function recursivePow(x, n) {
+  if (n === 0) {
+    return 1; // recursion base
+  } else {
+    return x * recursivePow(x, n - 1); // recursion step
+  }
+}
+
+console.log(recursivePow(2, 0));
