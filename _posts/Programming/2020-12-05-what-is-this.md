@@ -1,5 +1,5 @@
 ---
-title: 'What is this?!'
+title: 'JavaScript "this" simplified - all you need to know to use it confidently?!'
 description: 'The complete guide to utilize javascript this keyword'
 slug: 'what-is-this'
 thumbnail: 'this/what-is-this43-20.jpg'
@@ -12,7 +12,8 @@ tags:
   - javascript
 ---
 
-In this post, I want to touch upon one of the most popular and confusing topics of JavaScript - `this`. My goal here is to give you an idea of how it works, and why `this` behaves in such a manner.
+Javascript `this` is full of peculiarities. Wanna figure them out? Keep reading!
+My goal here is to give you an idea of how it works, and why `this` behaves in such a manner.
 
 <!--more-->
 
