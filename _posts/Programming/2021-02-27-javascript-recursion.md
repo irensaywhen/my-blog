@@ -1,16 +1,16 @@
 ---
-title: 'Recursion 101'
-description: 'Recursion ideas and appplication in javascript'
-slug: 'what-is-this'
-thumbnail: 'this/what-is-this43-20.jpg'
-thumbnail_preview: 'this/what-is-this11-20.jpg'
-image: '/assets/img/this/what-is-this21-20.jpg'
+title: 'Unlock the power of recursion by understanding the concepts behind it'
+description: 'Understand the two types of thinking and unlock the recursion power in javascript.'
+slug: 'recursion-explained'
+thumbnail: 'recursion-explained/recursion-pt1-43.jpg'
+thumbnail_preview: 'recursion-explained/recursion-pt1-11.jpg'
+image: '/assets/img/recursion-explained/recursion-pt1-21.jpg'
 thumbnail_alt: 'What is this'
 categories:
   - web development
 tags:
-  - personal
-  - help
+  - javascript
+  - web development
 ---
 
 Have you ever struggled, figuring out what recursion means? This post is just for you then!
@@ -25,14 +25,15 @@ In the second article, I'll focus on the practical aspects of it.
 
 ## TL;DR
 
-1. Two ways of thinking
-2.
+1. There exists two ways of thinking: recursive and iterative.
+2. When solving problems using **iterative thinking**, we do the same task on each iteration.
+3. When solving problems using **recursive thinking**, we use a base case when we know how to solve the problem, and try to get to this point from any other cases by calling the recursive function from within the recursive function. (Sounds complex, but I'm whetting your appetite :P)
 
 ## Recursive vs iterative thinking
 
 In general, there can be two ways of thinking: recursive and iterative.  
 Iterative thinking is one of the first things we learn, starting to learn to code.  
-It's somewhere around the `if-else` statements.  
+It's somewhere around the `for loops`.  
 Recursion, on the other hand, is a more complex concept. Let's start with a definition of a recursive function.
 
 > Recursive function is a function calling itself.
@@ -113,7 +114,7 @@ How we can rewrite it: **8 = 2 \* 4 = 2 \* 2 <sup>2</sup> = 2 \* 2 <sup>3 - 1</s
 Here you can notice that we **always** return to the previous step.
 And the **recursion base** is just the first step, the foundation.
 
-## Let me tell you a joke that will settle everything down
+## Let me tell you a joke
 
 Do you know about **the kettle principle**?
 
@@ -149,6 +150,8 @@ Now they have a kettle with boiled water. After a while, when the temperature de
 6. Turn the stove off.
 
 Do you feel the difference? The mathematician has used his prior knowledge to solve the problem.
-This is what recursion is all about. You know what the recursion base is, and you always try to get back to what you know.
+I think, the recursion has similar idea. I'm not asking you to drop all your progress so far.  
+Just think about the recursion base you have, and that you always want to get back to it.  
+And on each step, you should iteratively call the function from withing the function to use the power and knowledge you already have.
 
 Okay, I'm done with my stupid jokes. In the next article, I'll cover some recursion examples :) See you then!
