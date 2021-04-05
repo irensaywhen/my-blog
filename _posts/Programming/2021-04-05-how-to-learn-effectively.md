@@ -17,7 +17,7 @@ Why learning process is so difficult?
 Because it's a work of art on its own.
 We learn to manage our learning process the whole life. What's more important, it's quite unique for every single person. That's why there's no a silver bullet or an approach that works for everyone.
 
-<!-- more -->
+<!--more-->
 
 I have experience being self-taught. And it was a huge struggle in the beginning, so it is now. I still evaluate my approach to scouting for resources, helping myself to digest new information, get help from others, etc.
 
