@@ -1,6 +1,6 @@
 ---
-title: 'Learn to learn to save your sanity'
-description: "In this tutorial, I'll explain how to change the state in React components using built-in setState method. I'll cover in detail two different approaches of using this method, explain the differences between these approaches, and show when to use which. "
+title: 'How to learn effectively'
+description: 'Change the way you learn to save you time and sanity.'
 slug: learn-to-learn
 thumbnail: 'learn-to-learn/learn-to-learn43.jpg'
 thumbnail_preview: 'learn-to-learn/learn-to-learn11.jpg'
